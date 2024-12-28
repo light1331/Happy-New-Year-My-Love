@@ -1,0 +1,502 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+@font-face {
+   font-family: aliqa;
+   src: url(/Aliqa.otf);
+}
+
+@font-face {
+   font-family: anydore;
+   src:url(/Anydore.otf);
+}
+
+@font-face {
+   font-family: cocoBold;
+   src:url(/CocoGothic-Bold_trial.ttf);
+}
+
+@font-face {
+   font-family: CocoLight;
+   src:url(/CocoGothic-Light_trial.ttf);
+}
+
+@font-face {
+   font-family: Lovely;
+   src:url(/Feeling-Lovely.ttf);
+}
+
+@font-face {
+   font-family: lovelyHome;
+   src:url(/LovelyHome-9aBZ.ttf);
+}
+
+@font-face {
+   font-family: creation;
+   src:url(/Creattion-Demo.otf);
+}
+
+@font-face {
+   font-family: shilou;
+   src:url(/Silhouette-jEnj7.ttf);
+}
+
+/*--Styling For PageOne--*/
+#pageOne {
+   height: 100vh;
+   width: 100%;
+   
+   background-color: #000;
+   position: relative;
+   overflow: hidden;
+}
+
+#pageOne .overlay {
+   height: 100%;
+   width: 100%;
+   
+   background-image: url(pageOne.jpg);
+   background-size: cover;
+   background-position: center;
+   opacity: 0.50;
+}
+
+#pageOne i {
+   font-size: 5rem;
+   color: #FF004B;
+   position: absolute;
+   top: 25%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   opacity: 0;
+   transition: 0.5s all ease;
+   z-index: 999;
+}
+
+
+#pageOne>div {
+   position: absolute;
+   top: 48%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+#pageOne>div h1 {
+   font-family: cocoLight;
+   font-size: 2.5rem;
+   font-weight: 600;
+   color: #FDF42F;
+   text-shadow: 2px 2px 15px rgba(0, 0, 0, 1);
+   
+   text-transform: uppercase;
+   text-align: center;
+   line-height: 3.5rem;
+   white-space: nowrap;
+}
+
+#pageOne>div h1:nth-child(2) {
+   font-family: anydore;
+   font-size: 5.5rem;
+   font-weight: 100;
+   color: #E3A126;
+}
+
+#pageOne>div span {
+   text-transform: capitalize;
+   text-align: center;
+   color: #FFFFFF;
+   
+   font-family: cocoLight;
+   display: block;
+   margin: 3vh auto 0 auto;
+   line-height: 1.35rem;
+   text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}
+
+.universal-btn {
+   border: 2px solid #000;
+   border-radius: 7px;
+   outline: none;
+   background: #C0CEC4;
+   color: #000;
+   
+   padding: 1.5vh 2vh;
+   font-size: 0.85rem;
+   font-family: cocoLight;
+   text-transform: capitalize;
+   
+   position: relative;
+   bottom: -90%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   overflow: hidden;
+   transition: 0.6s all ease;
+   z-index: 999;
+}
+
+.universal-btn:hover {
+   color: #FFF;
+   border: 2px solid #FFF;
+}
+
+.universal-btn::before {
+   content: "";
+   position: absolute;
+   top: 100%;
+   left: 0;
+   
+   height: 100%;
+   width: 100%;
+   background-color: #000;
+   transition: 0.65s all ease;
+   z-index: -1;
+}
+
+.universal-btn:hover::before {
+   top: 0;
+}/*--PageOne Styling Ended Here--*/
+
+
+/*--PageTwo Styling--*/
+#pageTwo {
+   height: 100vh;
+   width: 100%;
+   color: #FFF;
+   background: #000;
+   overflow-x: scroll;
+   padding: 0 2vh;
+   position: relative;
+   
+   background-image: 
+   linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+   url(pageTwo.jpg);
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+}
+
+.pageTwo-heading h1 {
+   font-family: anydore;
+   white-space: nowrap;
+}
+
+#pageTwo>span {
+   font-family: cocoLight;
+   font-size: 0.85rem;
+   font-weight: 100;
+   
+   text-transform: capitalize;
+   text-align: center;
+   line-height: 1.5rem;
+   display: block;
+   padding: 2vh 1vh;
+   margin: 3vh 0;
+   border-radius: 50px;
+   
+/* From https://css.glass */
+   background: rgba(255, 255, 255, 0.04);
+   border-radius: 16px;
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(4.9px);
+   -webkit-backdrop-filter: blur(4.9px);
+   text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}
+
+.pageTwo-heading {
+   margin: 3vh auto 0 auto;
+}
+
+.pageTwo-heading h1 {
+   font-family: lovelyHome;
+   font-size: 3rem;
+   color: #E5E5E5;
+   
+   text-transform: capitalize;
+   text-align: center;
+   letter-spacing: 7px;
+   line-height: 3rem;
+   text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}
+
+.pageTwo-btn {
+   border: 2px solid #000;
+   border-radius: 7px;
+   outline: none;
+   background: #C0CEC4;
+   color: #000;
+   
+   padding: 1.5vh 2vh;
+   margin-bottom: 5vh;
+   font-size: 0.85rem;
+   font-family: cocoLight;
+   text-transform: capitalize;
+   
+   position: relative;
+   bottom: -2%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   overflow: hidden;
+   transition: 0.6s all ease;
+   z-index: 999;
+}
+
+.pageTwo-btn:hover {
+   color: #FFF;
+   border: 2px solid #FFF;
+}
+
+.pageTwo-btn::before {
+   content: "";
+   position: absolute;
+   top: 100%;
+   left: 0;
+   
+   height: 100%;
+   width: 100%;
+   background-color: #000;
+   transition: 0.65s all ease;
+   z-index: -1;
+}
+
+.pageTwo-btn:hover::before {
+   top: 0;
+}/*--PageTwo Styling Ended Here--*/
+
+
+/*--PageThree Styling--*/
+#pageThree {
+   height: 100vh;
+   width: 100%;
+   
+   background-color: #6D7CA6;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.pageThree-card {
+   height: 70vh;
+   width: 90%;
+   
+   background: #2F3C6B;
+   color: #FFF;
+   box-shadow: 0px 0px 30px rgba(0, 0, 0, .75);
+}
+
+.pageThree-card .card-logo {
+   height: 70px;
+   width: 70px;
+   
+   background-image: url(card-logo.jpg);
+   background-size: cover;
+   background-position: top;
+   border-radius: 50%;
+   
+   display: block;
+   margin: 10vh auto 1vh auto;
+}
+
+.pageThree-card h1 {
+   font-family: lovelyHome;
+   font-size: 4rem;
+   
+   text-transform: capitalize;
+   text-align: center;
+   letter-spacing: 8px;
+   line-height: 4.55rem;
+   margin: 3vh 0;
+}
+
+.pageThree-card span {
+   font-family: cocoBold;
+   
+   text-transform: capitalize;
+   text-align: center;
+   
+   display: block;
+   padding: 3vh 0 0 0;
+   margin-bottom: 1vh;
+}
+
+.pageThree-card small {
+   font-family: cocoLight;
+   
+   text-transform: capitalize;
+   text-align: center;
+   line-height: 1.25rem;
+   
+   display: block;
+   margin: 0 auto;
+   width: 75%;
+}
+
+.pageThree-card a {
+   text-decoration: none;
+}
+
+.pageThree-card .card-btn {
+   display: block;
+   margin: 10vh auto 0 auto;
+   background: #111;
+   color: #FFF;
+
+   padding: 1.5vh 2vh;
+   font-size: 0.85rem;
+   font-family: cocoLight;
+   text-transform: capitalize;
+   border-radius: 10px;
+   outline: none;
+   border: 2px solid #111;
+} /*--Page Three Ended--*/
+
+
+/*--Last Page Styling--*/
+#lastPage {
+   height: 100vh;
+   width: 100%;
+   color: #FFF;
+   
+   background-image: 
+   linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+   ,url(lastPage.jpg);
+   background-size: cover;
+   background-position: top;
+   
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+#lastPage .last-card {
+   min-height: 70vh;
+   width: 90%;
+   
+   background-image: 
+   linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.4))
+   ,url(last-card1.jpg);
+   background-size: cover;
+   background-position: bottom;
+   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.75);
+   
+   padding: 3vh 1vh;
+   border-radius: 20px;
+}
+
+.last-card span {
+   font-family: cocoLight;
+   font-size: 0.85rem;
+   
+   text-transform: capitalize;
+   text-align: center;
+   
+   display: block;
+   line-height: 1.35rem;
+} 
+
+.last-btn {
+border: 2px solid #000;
+border-radius: 7px;
+outline: none;
+background: #000;
+color: #FFF;
+
+padding: 1.5vh 2vh;
+margin: 4vh 0 0 0;
+font-size: 0.85rem;
+font-family: cocoLight;
+text-transform: capitalize;
+}
+/*--Last Page Ended--*/
+
+
+/*--Last Page One Styling --*/
+#lastPage1 {
+   height: 100vh;
+   width: 100%;
+   
+   background-image: 
+   linear-gradient(to top left, #FFFFFF, #B9B9B9);
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#lastPage1 .box-card {
+   height: 55vh;
+   width: 80%;
+   position: relative;
+   
+   border: 3px solid #5A2E1F;
+   padding: 5vh 3vh;
+}
+
+.box-card::before, .box-card::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, 200%);
+   
+   height: 15vh;
+   width: 3px;
+   background-color: #5A2E1F;
+   border-radius: 5px;
+}
+.box-card::after {
+   transform: translate(-50%, -300%);
+}
+
+.box-card span {
+   display: block;
+   text-align: center;
+   text-transform: uppercase;
+   margin: 0 auto;
+   
+   font-family: cocoLight;
+   font-size: 1.65rem;
+   color: #CE910C;
+}
+
+.box-card small {
+   display: block;
+   margin: 1vh auto 4vh auto;
+   width: max-content;
+   
+   text-transform: uppercase;
+   text-align: center;
+   padding: 0 0 0.5vh 0;
+   border-bottom: 1px solid #225023;
+   color: #225023;
+   
+   font-family: cocoLight;
+   font-size: 0.85rem;
+}
+
+.box-card h1 {
+   display: block;
+   text-align: center;
+   text-transform: uppercase;
+   
+   font-family: cocoBold;
+   font-size: 5rem;
+   line-height: 4.5rem;
+   margin: 3vh 0;
+} 
+
+.box-card h1:nth-child(4) {
+   transform: scale(1.5)
+}
+
+.box-card h4 {
+   display: block;
+   text-align: center;
+   text-transform: uppercase;
+   font-family: cocoLight;
+   font-size: 0.75rem;
+   color: #A47D10;
+}
